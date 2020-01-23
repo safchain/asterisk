@@ -809,6 +809,9 @@
 /* Define if your system has the PYTHONDEV libraries. */
 #undef HAVE_PYTHONDEV
 
+/* Define to 1 if you have the RabbitMQ Library library. */
+#undef HAVE_RABBITMQ
+
 /* Define to 1 if you have the Radius Client library. */
 #undef HAVE_RADIUS
 

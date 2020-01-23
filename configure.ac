@@ -522,6 +522,7 @@ AST_EXT_LIB_SETUP([OSPTK], [OSP Toolkit], [osptk])
 AST_EXT_LIB_SETUP([OSS], [Open Sound System], [oss])
 AST_EXT_LIB_SETUP([PGSQL], [PostgreSQL], [postgres])
 AST_EXT_LIB_SETUP([BEANSTALK], [Beanstalk Job Queue], [beanstalk])
+AST_EXT_LIB_SETUP([RABBITMQ], [RabbitMQ Library], [rabbitmq])
 
 if test "x${PBX_PJPROJECT}" != "x1" ; then
 AST_EXT_LIB_SETUP([PJPROJECT], [PJPROJECT], [pjproject])
@@ -1671,6 +1672,8 @@ AST_EXT_LIB_CHECK([ICONV], [c], [iconv_close], [iconv.h])
 AST_EXT_LIB_CHECK([ICAL], [ical], [icaltimezone_get_utc_timezone], [libical/ical.h], [${PTHREAD_LIBS}], [${PTHREAD_CFLAGS}])
 
 AST_EXT_LIB_CHECK([IKSEMEL], [iksemel], [iks_start_sasl], [iksemel.h])
+
+AST_EXT_LIB_CHECK([RABBITMQ], [rabbitmq], [amqp_new_connection], [amqp.h])
 
 if test "${USE_IMAP_TK}" != "no"; then
 	saved_cppflags="${CPPFLAGS}"
